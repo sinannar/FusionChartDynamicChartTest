@@ -1,3 +1,56 @@
-<h1>
-  {{title}}
-</h1>
+<!-- You can now use fusioncharts component in app.component.html -->
+
+
+<button (click)="addDonut();">
+  add Donut
+</button>
+
+<button (click)="addMsLine();">
+  add MsLine
+</button>
+
+<button (click)="addScatter();">
+  add Scatter
+</button>
+
+<button (click)="addMarimekko();">
+    add Marimekko
+</button>
+<button (click)="clearCharts();">
+    clearCharts
+</button>
+
+
+
+<ng-container *ngFor="let chart of charts">
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <button (click)="Increasewidth(chart);">
+    Increasewidth
+  </button>
+  <button (click)="Decreasewidth(chart);">
+    Decreasewidth
+  </button>
+  <button (click)="Increaseheight(chart);">
+    Increaseheight
+  </button>
+  <button (click)="Decreaseheight(chart);">
+    Decreaseheight
+  </button>
+
+
+  <fusioncharts
+  width="{{chart.width}}"
+  height="{{chart.height}}"
+  type="{{chart.type}}"
+  dataFormat="{{chart.dataFormat}}"
+  [dataSource]="chart.dataSource"
+  ></fusioncharts>
+  
+</ng-container>  
+
+
+
