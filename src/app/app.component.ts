@@ -12,24 +12,29 @@ export class AppComponent {
     clearCharts()
     {
         this.charts = new Array();
+        console.clear();
     }
 
     Increasewidth(chart:any)
     {
         chart.width += 100;
+        console.log("Increasewidth");
     }
     Decreasewidth(chart:any)
     {
         chart.width -= 100;
+        console.log("Decreasewidth");
     }
 
     Increaseheight(chart:any)
     {
         chart.height += 100;
+        console.log("Increaseheight");
     }
     Decreaseheight(chart:any)
     {
         chart.height -= 100;
+        console.log("Decreaseheight");
     }
 
     addMarimekko()
